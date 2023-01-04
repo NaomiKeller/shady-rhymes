@@ -1,0 +1,92 @@
+nav {
+	margin-top: 40px;
+	.flex {
+		display: flex;
+		justify-content: space-between;
+		ul {
+			list-style: none;
+			display: flex;
+			padding: 0;
+			margin: 0;
+			margin-top: 5px;
+			gap: 60px;
+			color: white;
+			li {
+				font-weight: 400;
+				font-size: 18px;
+				transition: ease-in-out .3s;
+				&:hover {
+					cursor: pointer;
+					color: $background;
+				}
+			}
+		}
+		.icons {
+			display: flex;
+			z-index: 99;
+			.shopping-bag {
+				padding-left: 95px;
+				min-width: 24px;
+			}
+			.hamburger {
+				display: none;
+				margin-left: 10px;
+				min-width: 24px;
+			}
+			&.active {
+				position: absolute;
+				top: 0; right: 0;
+				padding: 22px 20px 22px 130px;
+				margin-top: -22px;
+			}
+		}
+	}
+	.hamburger-menu {
+		position: absolute;
+		opacity: 0;
+		visibility: hidden;
+		transition: ease-in-out .3s;
+		background-color: $font-main;
+		right: 0;
+		top: -22px;
+		width: 208px;
+		&.active {
+			opacity: 1;
+			visibility: visible;
+		}
+		ul {
+			padding-left: 0;
+			margin-top: 64px;
+			margin-bottom: 0;
+			list-style: none;
+			li {
+				line-height: 40px;
+				background-color: white;
+				border-top: 1px solid #564e4e8e;
+				padding: 10px 0px 10px 20px;
+				&:active {
+					color: $accent;
+				}
+			}
+		}
+	}
+	@media (max-width: 800px) {
+		margin-top: 22px;
+		.flex {
+			.company-logo {
+				max-width: 86px;
+			}
+			ul {
+				display: none;
+			}
+			.icons {
+				.shopping-bag {
+					padding: 0;
+				}
+				.hamburger {
+					display: block;
+				}
+			}
+		}
+	}
+}

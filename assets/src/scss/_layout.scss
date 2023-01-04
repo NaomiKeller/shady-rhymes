@@ -1,0 +1,17 @@
+html {
+	scroll-behavior: smooth;
+}
+body {
+	margin: 0;
+	z-index: -1;
+    position: relative;
+}
+.container {
+	max-width: 1760px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 80px;
+	@media (max-width: 1024px) {
+		padding: 0 20px;
+	}
+}
