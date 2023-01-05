@@ -64,8 +64,9 @@
 			}
 		}
 		&#slide-2 {
-			background: url('../../img/hero-bg-2.avif');
+			background: url('../../img/living-room.jpg');
 			background-size: cover;
+			transition-property: left;
 			left: 200%;
 			&.active {
 				transition-delay: 0s;
@@ -73,8 +74,9 @@
 			}
 		}
 		&#slide-3 {
-			background: url('../../img/hero-bg-3.avif');
+			background: url('../../img/space.jpg');
 			background-size: cover;
+			transition-property: left;
 			left: 200%;
 			&.active {
 				transition-delay: 0s;

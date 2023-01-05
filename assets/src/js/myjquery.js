@@ -69,7 +69,7 @@ $(function(){
 
 	// Slider timer
 	setInterval(function(e) {
-		nextSlide();
+		//nextSlide();
 	}, 6000);
 
 	// Slider swipe
