@@ -12,7 +12,7 @@
 		justify-content: space-between;
 		flex-wrap: wrap;
 		.col {
-			flex-basis: 383px;
+			flex: 1;
 			border-radius: 10px;
 			padding: 16px 20px 20px 20px;
 			border: 1px solid transparent;
@@ -28,23 +28,8 @@
 			a {
 				@include anchor;
 			}
-		}
-		@media (max-width: 1900px) {
-			justify-content: space-between;
-			.col {
-				flex-basis: 22%;
-			}
-		}
-		@media (max-width: 1575px) {
-			.col {
-				flex-basis: 20%;
-			}
-		}
-		@media (max-width: 1270px) {
-			justify-content: center;
-			gap: 20px;
-			.col {
-				flex-basis: 40%;
+			@media (max-width: 850px) {
+				flex: 1 1 40%;
 			}
 		}
 		@media (max-width: 575px) {

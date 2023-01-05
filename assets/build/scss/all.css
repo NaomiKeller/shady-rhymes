@@ -293,7 +293,7 @@ nav {
     justify-content: space-between;
     flex-wrap: wrap; }
     .choose-us .flex .col {
-      flex-basis: 383px;
+      flex: 1;
       border-radius: 10px;
       padding: 16px 20px 20px 20px;
       border: 1px solid transparent;
@@ -320,20 +320,9 @@ nav {
         @media (max-width: 575px) {
           .choose-us .flex .col a {
             font-size: 12px; } }
-    @media (max-width: 1900px) {
-      .choose-us .flex {
-        justify-content: space-between; }
+      @media (max-width: 850px) {
         .choose-us .flex .col {
-          flex-basis: 22%; } }
-    @media (max-width: 1575px) {
-      .choose-us .flex .col {
-        flex-basis: 20%; } }
-    @media (max-width: 1270px) {
-      .choose-us .flex {
-        justify-content: center;
-        gap: 20px; }
-        .choose-us .flex .col {
-          flex-basis: 40%; } }
+          flex: 1 1 40%; } }
     @media (max-width: 575px) {
       .choose-us .flex {
         gap: 20px 0; }
