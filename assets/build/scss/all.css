@@ -2,6 +2,32 @@
 body {
   font-family: 'Poppins', sans-serif; }
 
+h2 {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 72px;
+  color: #564E4E;
+  margin-top: 80px; }
+  @media (max-width: 1000px) {
+    h2 {
+      font-size: 30px; } }
+  @media (max-width: 575px) {
+    h2 {
+      font-size: 18px;
+      line-height: 200%; } }
+
+p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 200%;
+  color: #564E4E; }
+  @media (max-width: 1000px) {
+    p {
+      font-size: 15px; } }
+  @media (max-width: 575px) {
+    p {
+      font-size: 12px; } }
+
 html {
   scroll-behavior: smooth; }
 
@@ -63,7 +89,8 @@ nav {
     background-color: #564E4E;
     right: 0;
     top: -22px;
-    width: 208px; }
+    width: 100%;
+    box-shadow: 0 0 1000px black; }
     nav .hamburger-menu.active {
       opacity: 1;
       visibility: visible; }
@@ -173,7 +200,8 @@ nav {
     margin: 0 auto 60px;
     font-size: 18px;
     font-weight: 400;
-    line-height: 36px; }
+    line-height: 36px;
+    color: white; }
   .hero .search-container {
     position: relative; }
     .hero .search-container .text-search {
@@ -245,13 +273,7 @@ nav {
 
 .choose-us {
   margin-bottom: 200px; }
-  .choose-us h2 {
-    font-weight: 500;
-    font-size: 36px;
-    line-height: 72px;
-    color: #564E4E;
-    margin-top: 80px; }
-  @media (max-width: 680px) {
+  @media (max-width: 575px) {
     .choose-us {
       margin-top: 20px;
       margin-bottom: 100px; }
@@ -274,14 +296,9 @@ nav {
       .choose-us .flex .col img {
         max-width: 60px; }
       .choose-us .flex .col h4 {
-        font-weight: 400;
+        font-weight: 500;
         font-size: 18px;
         line-height: 36px;
-        color: #564E4E; }
-      .choose-us .flex .col p {
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 200%;
         color: #564E4E; }
       .choose-us .flex .col a {
         font-weight: 400;
@@ -293,6 +310,12 @@ nav {
         transition: ease-in-out .3s; }
         .choose-us .flex .col a:hover {
           color: #c87971; }
+        @media (max-width: 1000px) {
+          .choose-us .flex .col a {
+            font-size: 15px; } }
+        @media (max-width: 575px) {
+          .choose-us .flex .col a {
+            font-size: 12px; } }
     @media (max-width: 1900px) {
       .choose-us .flex {
         justify-content: space-between; }
@@ -307,7 +330,7 @@ nav {
         gap: 20px; }
         .choose-us .flex .col {
           flex-basis: 40%; } }
-    @media (max-width: 680px) {
+    @media (max-width: 575px) {
       .choose-us .flex {
         gap: 20px 0; }
         .choose-us .flex .col {
@@ -323,5 +346,121 @@ nav {
             color: #564E4E; }
           .choose-us .flex .col a {
             font-size: 12px; } }
+
+.ideas {
+  margin-bottom: 200px; }
+  .ideas .flex {
+    display: flex;
+    justify-content: space-between; }
+    .ideas .flex .col {
+      flex-basis: 47%; }
+      .ideas .flex .col h2 {
+        margin-top: 0; }
+      .ideas .flex .col img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-top-left-radius: 60px;
+        border-top-right-radius: 60px;
+        border-bottom-left-radius: 60px; }
+      .ideas .flex .col a {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 200%;
+        color: #F79489;
+        text-decoration: none;
+        cursor: pointer;
+        transition: ease-in-out .3s; }
+        .ideas .flex .col a:hover {
+          color: #c87971; }
+        @media (max-width: 1000px) {
+          .ideas .flex .col a {
+            font-size: 15px; } }
+        @media (max-width: 575px) {
+          .ideas .flex .col a {
+            font-size: 12px; } }
+      .ideas .flex .col p {
+        margin-top: 20px;
+        margin-bottom: 20px; }
+      .ideas .flex .col.img {
+        position: relative; }
+    .ideas .flex .accordion {
+      display: block; }
+      .ideas .flex .accordion .accordion-item {
+        transition: ease-in-out .6s; }
+        .ideas .flex .accordion .accordion-item span {
+          display: block;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 200%;
+          color: #564E4E;
+          margin: 0 0 20px;
+          position: relative;
+          cursor: pointer; }
+          .ideas .flex .accordion .accordion-item span::after {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 0px;
+            border: 1px solid #F79489;
+            right: 0;
+            top: 50%; }
+            @media (max-width: 575px) {
+              .ideas .flex .accordion .accordion-item span::after {
+                width: 10px; } }
+        .ideas .flex .accordion .accordion-item p {
+          visibility: hidden;
+          margin: 0;
+          opacity: 0;
+          height: 0;
+          font-style: normal;
+          font-weight: 300;
+          font-size: 18px;
+          line-height: 0%;
+          color: #564E4E;
+          transition: ease-in-out .6s;
+          transform-origin: top; }
+        .ideas .flex .accordion .accordion-item.active span::before {
+          content: '';
+          position: absolute;
+          width: 16px;
+          height: 0px;
+          top: 50%;
+          right: 0;
+          border: 1px solid #F79489;
+          transform: rotate(-90deg); }
+          @media (max-width: 575px) {
+            .ideas .flex .accordion .accordion-item.active span::before {
+              width: 10px; } }
+        .ideas .flex .accordion .accordion-item.active p {
+          visibility: visible;
+          opacity: 1;
+          height: 100%;
+          margin-bottom: 40px;
+          line-height: 200%; }
+    .ideas .flex .accent-vector-1, .ideas .flex .accent-vector-2 {
+      position: absolute;
+      left: -33px; }
+    @media (max-width: 1250px) {
+      .ideas .flex {
+        flex-wrap: wrap-reverse; }
+        .ideas .flex .col {
+          flex-basis: 100%; }
+          .ideas .flex .col.img {
+            margin-bottom: 100px; } }
+    @media (max-width: 575px) {
+      .ideas .flex .col img {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px; }
+      .ideas .flex .accordion .accordion-item span {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 200%; }
+      .ideas .flex .accordion .accordion-item p {
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 200%; } }
 
 /*# sourceMappingURL=all.css.map */

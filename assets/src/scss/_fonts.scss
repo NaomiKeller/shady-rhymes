@@ -15,11 +15,48 @@ body {
 }
 
 @mixin anchor {
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 200%;
 	color: $accent;
 	text-decoration: none;
 	cursor: pointer;
 	transition: ease-in-out .3s;
 	&:hover {
 		color: $accent-active;
+	}
+	@media (max-width: 1000px) {
+		font-size: 15px;
+	}
+	@media (max-width: 575px) {
+		font-size: 12px;
+	}
+}
+
+h2 {
+	font-weight: 500;
+	font-size: 36px;
+	line-height: 72px;
+	color: $font-main;
+	margin-top: 80px;
+	@media (max-width: 1000px) {
+		font-size: 30px;
+	}
+	@media (max-width: 575px) {
+		font-size: 18px;
+		line-height: 200%;
+	}
+}
+
+p {
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 200%;
+	color: #564E4E;
+	@media (max-width: 1000px) {
+		font-size: 15px;
+	}
+	@media (max-width: 575px) {
+		font-size: 12px;
 	}
 }

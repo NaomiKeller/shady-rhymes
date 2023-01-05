@@ -1,13 +1,6 @@
 .choose-us {
 	margin-bottom: 200px;
-	h2 {
-		font-weight: 500;
-		font-size: 36px;
-		line-height: 72px;
-		color: $font-main;
-		margin-top: 80px;
-	}
-	@media (max-width: 680px) {
+	@media (max-width: 575px) {
 		h2 {
 			display: none;
 		}
@@ -33,21 +26,12 @@
 				max-width: 60px;
 			}
 			h4 {
-				font-weight: 400;
+				font-weight: 500;
 				font-size: 18px;
 				line-height: 36px;
 				color: #564E4E;
 			}
-			p {
-				font-weight: 400;
-				font-size: 18px;
-				line-height: 200%;
-				color: #564E4E;	
-			}
 			a {
-				font-weight: 400;
-				font-size: 18px;
-				line-height: 200%;
 				@include anchor;
 			}
 		}
@@ -69,7 +53,7 @@
 				flex-basis: 40%;
 			}
 		}
-		@media (max-width: 680px) {
+		@media (max-width: 575px) {
 			gap: 20px 0;
 			.col {
 				flex-basis: 100%;

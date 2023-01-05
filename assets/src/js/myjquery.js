@@ -69,7 +69,7 @@ $(function(){
 
 	// Slider timer
 	setInterval(function(e) {
-		//nextSlide();
+		nextSlide();
 	}, 6000);
 
 	// Slider swipe
@@ -96,4 +96,9 @@ $(function(){
 		}
 	
 	}
+
+	// Accordion
+	$('.accordion-item').find('span').on('click', function() {
+		$(this).parent().toggleClass('active');
+	})
 });

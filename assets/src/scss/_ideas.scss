@@ -1,0 +1,133 @@
+.ideas {
+	margin-bottom: 200px;
+	.flex {
+		display: flex;
+		justify-content: space-between;
+		.col {
+			flex-basis: 47%;
+			h2 {
+				margin-top: 0;
+			}
+			img {
+				object-fit: cover;
+				width: 100%;
+				height: 100%;
+				border-top-left-radius: 60px;
+				border-top-right-radius: 60px;
+				border-bottom-left-radius: 60px;
+			}
+			a {
+				@include anchor;
+			}
+			p {
+				margin-top: 20px;
+				margin-bottom: 20px;
+			}
+			&.img {
+				position: relative;
+			}
+		}
+		.accordion {
+			display: block;
+			.accordion-item {
+				transition: ease-in-out .6s;
+				span {
+					display: block;
+					font-style: normal;
+					font-weight: 400;
+					font-size: 18px;
+					line-height: 200%;
+					color: #564E4E;
+					margin: 0 0 20px;
+					position: relative;
+					cursor: pointer;
+					&::after {
+						content: '';
+						position: absolute;
+						width: 16px;
+						height: 0px;
+						border: 1px solid #F79489;
+						right: 0;
+						top: 50%;
+						@media (max-width: 575px) {
+							width: 10px;
+						}
+					}
+				}
+				p {
+					visibility: hidden;
+					margin: 0;
+					opacity: 0;
+					height: 0;
+					font-style: normal;
+					font-weight: 300;
+					font-size: 18px;
+					line-height: 0%;
+					color: #564E4E;
+					transition: ease-in-out .6s;
+					transform-origin: top;
+				}
+				&.active {
+					span {
+						&::before {
+							content: '';
+							position: absolute;
+							width: 16px;
+							height: 0px;
+							top: 50%;
+							right: 0;
+							border: 1px solid #F79489;
+							transform: rotate(-90deg);
+							@media (max-width: 575px) {
+								width: 10px;
+							}
+						}
+					}
+					p {
+						visibility: visible;
+						opacity: 1;
+						height: 100%;
+						margin-bottom: 40px;
+						line-height: 200%;
+					}
+				}
+			}
+		}
+		.accent-vector-1, .accent-vector-2 {
+			position: absolute;
+			left: -33px;
+		}
+		@media (max-width: 1250px) {
+			flex-wrap: wrap-reverse;
+			.col {
+				flex-basis: 100%;
+				&.img {
+					margin-bottom: 100px;
+				}
+			}
+		}
+		@media (max-width: 575px) {
+			.col {
+				img {
+					border-top-left-radius: 20px;
+					border-top-right-radius: 20px;
+					border-bottom-left-radius: 20px;
+				}
+			}
+			.accordion {
+				.accordion-item {
+					span {
+						font-weight: 400;
+						font-size: 12px;
+						line-height: 200%;
+					}
+					p {
+						font-weight: 300;
+						font-size: 12px;
+						line-height: 200%;
+					}
+				}
+			}
+		}
+	}
+}
