@@ -25,12 +25,6 @@
 			img {
 				max-width: 60px;
 			}
-			h4 {
-				font-weight: 500;
-				font-size: 18px;
-				line-height: 36px;
-				color: #564E4E;
-			}
 			a {
 				@include anchor;
 			}
@@ -59,11 +53,6 @@
 				flex-basis: 100%;
 				img {
 					max-width: 28px;
-				}
-				h4 {
-					font-weight: 500;
-					font-size: 12px;
-					line-height: 200%;
 				}
 				p {
 					font-size: 12px;

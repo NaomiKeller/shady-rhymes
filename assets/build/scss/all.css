@@ -16,6 +16,17 @@ h2 {
       font-size: 18px;
       line-height: 200%; } }
 
+h4 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 36px;
+  color: #564E4E; }
+  @media (max-width: 575px) {
+    h4 {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 200%; } }
+
 p {
   font-weight: 400;
   font-size: 18px;
@@ -198,8 +209,6 @@ nav {
   .hero p {
     max-width: 550px;
     margin: 0 auto 60px;
-    font-size: 18px;
-    font-weight: 400;
     line-height: 36px;
     color: white; }
   .hero .search-container {
@@ -295,11 +304,6 @@ nav {
         box-shadow: 4px 2px 10px 2px rgba(247, 148, 137, 0.2); }
       .choose-us .flex .col img {
         max-width: 60px; }
-      .choose-us .flex .col h4 {
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 36px;
-        color: #564E4E; }
       .choose-us .flex .col a {
         font-weight: 400;
         font-size: 18px;
@@ -337,10 +341,6 @@ nav {
           flex-basis: 100%; }
           .choose-us .flex .col img {
             max-width: 28px; }
-          .choose-us .flex .col h4 {
-            font-weight: 500;
-            font-size: 12px;
-            line-height: 200%; }
           .choose-us .flex .col p {
             font-size: 12px;
             color: #564E4E; }
@@ -462,5 +462,42 @@ nav {
         font-weight: 300;
         font-size: 12px;
         line-height: 200%; } }
+
+.featured-products {
+  margin-bottom: 60px; }
+  .featured-products h2 {
+    text-align: center; }
+  .featured-products .flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; }
+    .featured-products .flex .col {
+      flex: 1 1 auto; }
+    @media (max-width: 850px) {
+      .featured-products .flex {
+        flex-wrap: wrap; }
+        .featured-products .flex .col {
+          flex: 1 1 40%; } }
+  .featured-products .product-img {
+    object-fit: cover;
+    width: 100%;
+    height: auto; }
+  .featured-products h4 {
+    margin: 20px 0 10px 0; }
+  .featured-products span {
+    display: block; }
+  .featured-products .category {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 200%;
+    color: #C4C4C4;
+    margin: 0 0 10px 0; }
+  .featured-products .price {
+    margin: 20px 0 40px 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 200%;
+    color: #564E4E; }
 
 /*# sourceMappingURL=all.css.map */

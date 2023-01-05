@@ -48,6 +48,18 @@ h2 {
 	}
 }
 
+h4 {
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 36px;
+	color: #564E4E;
+	@media (max-width: 575px) {
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 200%;
+	}
+}
+
 p {
 	font-weight: 400;
 	font-size: 18px;
