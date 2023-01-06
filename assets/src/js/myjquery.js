@@ -30,6 +30,31 @@ $(function(){
 		$('#slide-1').removeClass('active');
 		$('#slide-2').removeClass('active');
 	}
+
+	function activateTestimonialSlide1() {
+		$('#dot-1-testimonial').addClass('active');
+		$('#dot-2-testimonial').removeClass('active');
+		$('#dot-3-testimonial').removeClass('active');
+		$('#slide-1-testimonial').addClass('active');
+		$('#slide-2-testimonial').removeClass('active');
+		$('#slide-3-testimonial').removeClass('active');
+	}
+	function activateTestimonialSlide2() {
+		$('#dot-2-testimonial').addClass('active');
+		$('#dot-1-testimonial').removeClass('active');
+		$('#dot-3-testimonial').removeClass('active');
+		$('#slide-2-testimonial').addClass('active');
+		$('#slide-1-testimonial').removeClass('active');
+		$('#slide-3-testimonial').removeClass('active');
+	}
+	function activateTestimonialSlide3() {
+		$('#dot-3-testimonial').addClass('active');
+		$('#dot-1-testimonial').removeClass('active');
+		$('#dot-2-testimonial').removeClass('active');
+		$('#slide-3-testimonial').addClass('active');
+		$('#slide-1-testimonial').removeClass('active');
+		$('#slide-2-testimonial').removeClass('active');
+	}
 	
 	// Slider nav controls
 	$('#dot-1').on('click', () => {
@@ -40,6 +65,16 @@ $(function(){
 	});
 	$('#dot-3').on('click', () => {
 		activateSlide3();
+	});
+
+	$('#dot-1-testimonial').on('click', () => {
+		activateTestimonialSlide1();
+	});
+	$('#dot-2-testimonial').on('click', () => {
+		activateTestimonialSlide2();
+	});
+	$('#dot-3-testimonial').on('click', () => {
+		activateTestimonialSlide3();
 	});
 
 	// Get next or previous slide
@@ -67,9 +102,34 @@ $(function(){
 		}
 	}
 
+	const nextSlideTestimonial = (direction) => {
+		let slide1state = $('#slide-1-testimonial').hasClass('active');
+		let slide2state = $('#slide-2-testimonial').hasClass('active');
+		let slide3state = $('#slide-3-testimonial').hasClass('active');
+
+		if (!direction) {
+			if (slide1state) {
+				activateTestimonialSlide2()
+			} else if (slide2state) {
+				activateTestimonialSlide3()
+			} else if (slide3state) {
+				activateTestimonialSlide1()
+			}
+		} else {
+			if (slide1state) {
+				activateTestimonialSlide3()
+			} else if (slide2state) {
+				activateTestimonialSlide1()
+			} else if (slide3state) {
+				activateTestimonialSlide2()
+			}
+		}
+	}
+
 	// Slider timer
 	setInterval(function(e) {
 		nextSlide();
+		nextSlideTestimonial();
 	}, 6000);
 
 	// Slider swipe

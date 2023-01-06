@@ -1,0 +1,162 @@
+.testimonials {
+    background: linear-gradient(279.85deg, #fff 0%, #FAF5F2 100%);
+	position: relative;
+	.carousel-title {
+		h2 {
+			text-align: center;
+			top: 0;
+			padding-top: 84px;
+			padding-bottom: 110px;
+		}
+	}
+	.carousel-view {
+		.flex {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			padding-bottom: 248px;
+			gap: 70px;
+			.col {
+				flex: 1 1;
+				h4 {
+					font-weight: 500;
+					font-size: 24px;
+					line-height: 200%;
+				}
+				.author {
+					display: flex;
+					.author-text {
+						display: block;
+						margin-left: 10px;
+					}
+				}
+				img {
+					max-width: 60px;
+					max-height: 60px;
+				}
+				span {
+					display: block;
+					&.author-name {
+						font-weight: 500;
+						font-size: 18px;
+						line-height: 200%;
+					}
+					&.author-title {
+						font-weight: 300;
+						font-size: 14px;
+						line-height: 200%;
+						color: #564E4E;
+					}
+				}
+				p {
+					min-height: 144px;
+				}
+				@media (max-width: 1250px) {
+					h4 {
+						font-size: 20px;
+					}
+					p {
+						font-size: 15px;
+					}
+					img {
+						max-width: 40px;
+						max-height: 40px;
+					}
+					span {
+						&.author-name {
+							font-size: 14px;
+						}
+						&.author-title {
+							font-size: 12px;
+						}
+					}
+				}
+			}
+		}
+	}
+	.carousel-container {
+		display: flex;
+	}
+	.carousel-content {
+		@include carousel-content;
+		position: absolute;
+		top: unset;
+		bottom: 62px;
+		left: 47.5%;
+		.slider-nav {
+			bottom: 0;
+			span {
+				transition-delay: 0s;
+			}
+		}
+		@media (max-width: 900px) {
+			.slider-nav {
+				width: 34px;
+				margin-left: -8px;
+				span {
+					height: 6px;
+					width: 6px;
+					&#dot-2-testimonial {
+						left: 40%;
+					}
+				}
+			}
+		}
+	}
+	.carousel-view {
+		min-width: fit-content;
+		position: relative;
+		top: 0;
+		right: 0; 
+		bottom: 0;
+		opacity: 0;
+		transition: ease-in-out 1s;
+		&#slide-1-testimonial {
+			left: 200%;
+			&.active {
+				opacity: 1;
+				left: 0;
+			}
+		}
+		&#slide-2-testimonial {
+			left: 200%;
+			&.active {
+				opacity: 1;
+				left: -100%;
+			}
+		}
+		&#slide-3-testimonial {
+			left: 300%;
+			&.active {
+				opacity: 1;
+				left: -200%;
+			}
+		}
+	}
+	@media (max-width: 900px) {
+		.carousel-title {
+			h2 {
+				padding: 40px 0;
+				margin-bottom: 0;
+			}
+		}
+		.carousel-view {
+			.flex {
+				display: block;
+				padding-bottom: 88px;
+				.col {
+					h4 {
+						font-size: 14px;
+					}
+					.author {
+						margin-bottom: 40px;
+					}
+					p {
+						font-size: 12px;
+						min-height: auto;
+					}
+				}
+			}
+		}
+	}
+}
