@@ -15,7 +15,7 @@ $(function(){
 
 	window.addEventListener("scroll", function(){
 		var st = window.pageYOffset || document.documentElement.scrollTop;
-		if (st > 150 && st < 400) {
+		if (st > 80 && st < 400) {
 			$('nav').addClass('pre-scroll');
 		}
 		else if (st > 400){
