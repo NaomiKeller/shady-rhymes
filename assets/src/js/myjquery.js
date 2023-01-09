@@ -59,22 +59,34 @@ $(function(){
 	// Slider nav controls
 	$('#dot-1').on('click', () => {
 		activateSlide1();
+		clearInterval(interval);
+		interval = setInterval(nextSlide, 6000);
 	});
 	$('#dot-2').on('click', () => {
 		activateSlide2();
+		clearInterval(interval);
+		interval = setInterval(nextSlide, 6000);
 	});
 	$('#dot-3').on('click', () => {
 		activateSlide3();
+		clearInterval(interval);
+		interval = setInterval(nextSlide, 6000);
 	});
 
 	$('#dot-1-testimonial').on('click', () => {
 		activateTestimonialSlide1();
+		clearInterval(intervalTestimonial);
+		intervalTestimonial = setInterval(nextSlideTestimonial, 6000);
 	});
 	$('#dot-2-testimonial').on('click', () => {
 		activateTestimonialSlide2();
+		clearInterval(intervalTestimonial);
+		intervalTestimonial = setInterval(nextSlideTestimonial, 6000);
 	});
 	$('#dot-3-testimonial').on('click', () => {
 		activateTestimonialSlide3();
+		clearInterval(intervalTestimonial);
+		intervalTestimonial = setInterval(nextSlideTestimonial, 6000);
 	});
 
 	// Get next or previous slide
@@ -126,13 +138,11 @@ $(function(){
 		}
 	}
 
-	// Slider timer
-	setInterval(function(e) {
-		nextSlide();
-		nextSlideTestimonial();
-	}, 6000);
+	// Timers
+	var interval = setInterval(nextSlide, 6000);
+	var intervalTestimonial = setInterval(nextSlideTestimonial, 6000);
 
-	// Slider swipe
+	// Hero slider swipe
 	let carousel = document.getElementsByClassName('hero')[0];
 
 	carousel.addEventListener('touchstart', function (event) {
@@ -149,10 +159,43 @@ $(function(){
 	function handleGesture() {
 		if (touchendX < touchstartX) {
 			nextSlide();
+			clearInterval(interval);
+			interval = setInterval(nextSlide, 6000);
 		}
 	
 		if (touchendX > touchstartX) {
 			nextSlide('left');
+			clearInterval(interval);
+			interval = setInterval(nextSlide, 6000);
+		}
+	
+	}
+
+	// Testimonial slider swipe
+	let carouselTestimonial = document.getElementsByClassName('testimonials')[0];
+
+	carouselTestimonial.addEventListener('touchstart', function (event) {
+		touchstartX = event.changedTouches[0].screenX;
+		touchstartY = event.changedTouches[0].screenY;
+	}, false);
+	
+	carouselTestimonial.addEventListener('touchend', function (event) {
+		touchendX = event.changedTouches[0].screenX;
+		touchendY = event.changedTouches[0].screenY;
+		handleGestureTestimonial();
+	}, false);
+	
+	function handleGestureTestimonial() {
+		if (touchendX < touchstartX) {
+			nextSlideTestimonial();
+			clearInterval(intervalTestimonial);
+			intervalTestimonial = setInterval(nextSlideTestimonial, 6000);
+		}
+	
+		if (touchendX > touchstartX) {
+			nextSlideTestimonial('left');
+			clearInterval(intervalTestimonial);
+			intervalTestimonial = setInterval(nextSlideTestimonial, 6000);
 		}
 	
 	}
