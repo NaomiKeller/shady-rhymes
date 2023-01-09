@@ -40,7 +40,8 @@ p {
       font-size: 12px; } }
 
 html {
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+  overflow-x: hidden; }
 
 body {
   margin: 0;
@@ -700,5 +701,57 @@ nav {
       .testimonials .carousel-view .flex .col p {
         font-size: 12px;
         min-height: auto; } }
+
+.footer {
+  background: linear-gradient(275.58deg, #000000 0%, #4B4B4B 100%); }
+  .footer .flex {
+    display: flex;
+    justify-content: space-between; }
+    .footer .flex .col {
+      margin: 100px 0 197px 0; }
+      .footer .flex .col h4 {
+        margin: 0;
+        margin-bottom: 20px;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 36px;
+        color: #FADCD9; }
+      .footer .flex .col ul {
+        list-style: none;
+        padding: 0;
+        margin: 0; }
+        .footer .flex .col ul li {
+          margin-bottom: 24px;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 27px;
+          color: #FFFFFF; }
+  .footer .copyright {
+    color: #fff;
+    margin: 0;
+    padding-bottom: 28px;
+    width: 100%;
+    text-align: center; }
+  @media (max-width: 890px) {
+    .footer {
+      background: black; }
+      .footer .flex {
+        flex-wrap: wrap; }
+        .footer .flex .col {
+          margin: 0 0 40px 0;
+          flex-basis: 100%; }
+          .footer .flex .col img {
+            margin-top: 20px; }
+          .footer .flex .col:last-child {
+            margin-bottom: 100px; } }
+  @media (max-width: 570px) {
+    .footer .flex .col img {
+      max-width: 124px; }
+    .footer .flex .col h4 {
+      font-size: 14px;
+      line-height: 21px; }
+    .footer .flex .col ul li {
+      font-size: 12px;
+      line-height: 18px; } }
 
 /*# sourceMappingURL=all.css.map */
