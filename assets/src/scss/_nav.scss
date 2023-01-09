@@ -68,22 +68,30 @@ nav {
 	&.pre-scroll {
 		visibility: hidden;
 		opacity: 0;
-		width: -moz-available;
-		width: -webkit-fill-available;
-		width: fill-available;
+		min-width: -moz-available;
+		min-width: -webkit-fill-available;
+		min-width: fill-available;
 		background: transparent;
 		transform: translateY(-300%);
+		.flex {
+			max-width: 1760px;
+   			margin: 0 auto;
+		}
 	}
 	&.scrolled {
 		transform: translateY(0);
 		position: fixed;
-		width: -moz-available;
-		width: -webkit-fill-available;
-		width: fill-available;
+		min-width: -moz-available;
+		min-width: -webkit-fill-available;
+		min-width: fill-available;
 		background: linear-gradient(275.58deg, #000000 0%, #4B4B4B 100%);
 		margin-top: 0;
 		padding-top: 20px;
 		padding-bottom: 20px;
+		.flex {
+			max-width: 1760px;
+   			margin: 0 auto;
+		}
 	}
 }
 
