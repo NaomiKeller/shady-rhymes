@@ -59,7 +59,10 @@ body {
       padding: 0 20px; } }
 
 nav {
-  margin-top: 40px; }
+  margin-top: 40px;
+  z-index: 100;
+  transition: ease-in-out .3s;
+  transform-origin: top; }
   nav .flex {
     display: flex;
     justify-content: space-between; }
@@ -99,7 +102,6 @@ nav {
     opacity: 0;
     visibility: hidden;
     transition: ease-in-out .3s;
-    background-color: #564E4E;
     right: 0;
     top: 0;
     width: 100%;
@@ -110,7 +112,7 @@ nav {
       visibility: visible; }
     nav .hamburger-menu ul {
       padding-left: 0;
-      margin-top: 68px;
+      margin-top: 63px;
       margin-bottom: 0;
       list-style: none; }
       nav .hamburger-menu ul li {
@@ -131,6 +133,24 @@ nav {
         padding: 0; }
       nav .flex .icons .hamburger {
         display: block; } }
+  nav.pre-scroll {
+    visibility: hidden;
+    opacity: 0;
+    width: -moz-available;
+    width: -webkit-fill-available;
+    width: fill-available;
+    background: transparent;
+    transform: translateY(-300%); }
+  nav.scrolled {
+    transform: translateY(0);
+    position: fixed;
+    width: -moz-available;
+    width: -webkit-fill-available;
+    width: fill-available;
+    background: linear-gradient(275.58deg, #000000 0%, #4B4B4B 100%);
+    margin-top: 0;
+    padding-top: 20px;
+    padding-bottom: 20px; }
 
 .hero {
   text-align: center;

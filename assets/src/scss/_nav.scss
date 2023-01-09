@@ -1,5 +1,8 @@
 nav {
 	margin-top: 40px;
+	z-index: 100;
+	transition: ease-in-out .3s;
+	transform-origin: top;
 	.flex {
 		display: flex;
 		justify-content: space-between;
@@ -46,7 +49,6 @@ nav {
 		opacity: 0;
 		visibility: hidden;
 		transition: ease-in-out .3s;
-		background-color: $font-main;
 		right: 0;
 		top: 0;
 		width: 100%;
@@ -58,7 +60,7 @@ nav {
 		}
 		ul {
 			padding-left: 0;
-			margin-top: 68px;
+			margin-top: 63px;
 			margin-bottom: 0;
 			list-style: none;
 			li {
@@ -90,5 +92,26 @@ nav {
 				}
 			}
 		}
+	}
+	&.pre-scroll {
+		visibility: hidden;
+		opacity: 0;
+		//position: fixed;
+		width: -moz-available;
+		width: -webkit-fill-available;
+		width: fill-available;
+		background: transparent;
+		transform: translateY(-300%);
+	}
+	&.scrolled {
+		transform: translateY(0);
+		position: fixed;
+		width: -moz-available;
+		width: -webkit-fill-available;
+		width: fill-available;
+		background: linear-gradient(275.58deg, #000000 0%, #4B4B4B 100%);
+		margin-top: 0;
+		padding-top: 20px;
+		padding-bottom: 20px;
 	}
 }
