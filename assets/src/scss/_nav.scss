@@ -23,7 +23,7 @@ nav {
 		}
 		.icons {
 			display: flex;
-			z-index: 99;
+			z-index: 101;
 			.shopping-bag {
 				padding-left: 95px;
 				min-width: 24px;
@@ -34,30 +34,31 @@ nav {
 				min-width: 24px;
 			}
 			&.active {
-				position: absolute;
+				position: fixed;
 				top: 0; right: 0;
 				padding: 22px 20px 22px 130px;
-				margin-top: -22px;
+				margin-top: 0;
 			}
 		}
 	}
 	.hamburger-menu {
-		position: absolute;
+		position: fixed;
 		opacity: 0;
 		visibility: hidden;
 		transition: ease-in-out .3s;
 		background-color: $font-main;
 		right: 0;
-		top: -22px;
+		top: 0;
 		width: 100%;
-		box-shadow: 0 0 1000px black;
+		box-shadow: 0 0 500px black;
+		z-index: 100;
 		&.active {
 			opacity: 1;
 			visibility: visible;
 		}
 		ul {
 			padding-left: 0;
-			margin-top: 64px;
+			margin-top: 68px;
 			margin-bottom: 0;
 			list-style: none;
 			li {

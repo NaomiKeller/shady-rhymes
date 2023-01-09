@@ -23,6 +23,10 @@
 					font-size: 18px;
 					line-height: 27px;
 					color: #FFFFFF;
+					&:hover {
+						cursor: pointer;
+						color: $accent;
+					}
 				}
 			}
 		}
